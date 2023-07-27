@@ -84,6 +84,56 @@ export class Settings extends React.Component<{}> {
     render() {
         return (
             <div style={{ width: '100%' }}>
+
+                <div style={{ marginBottom: 8, marginTop: 8 }}>
+                    <div>
+                        <sp-label value="">
+                            User Name:
+                        </sp-label>
+                        <sp-textfield
+                            id="username"
+                            type="text"
+                            placeholder="User Name"
+                            value=""
+                            onInput={(
+                                event: React.ChangeEvent<HTMLTextAreaElement>
+                            ) => {
+                                store.updateProperty(
+                                    '',
+                                    event.target.value
+                                )
+                            }}
+                        />
+                    </div>
+
+                    <div>
+                        <sp-label value="" style={{ marginRight: 8 }}>
+                            Password:
+                        </sp-label>
+                        <sp-textfield
+                            value={''}
+                            type="password"
+                            onInput={(
+                                event: React.ChangeEvent<HTMLTextAreaElement>
+                            ) => {
+                                store.updateProperty(
+                                    '',
+                                    event.target.value
+                                )
+                            }}
+                        />
+                    </div>
+
+                </div>
+
+
+                <button
+                    className="btnSquare"
+                    style={{ marginBottom: 8 }}
+                >
+                    Login
+                </button>
+
                 <SpMenu
                     title="select an interploation method for resizing images"
                     items={Object.keys(interpolationMethods)}
