@@ -11,6 +11,7 @@ import { reaction } from 'mobx'
 import { storage } from 'uxp'
 import { ErrorBoundary } from '../util/errorBoundary'
 import { MaskModeEnum } from '../util/ts/enum'
+import LoginPage from "./loginPage";
 // import { Jimp } from '../util/oldSystem'
 declare const Jimp: any // make sure you import jimp before importing settings.tsx
 
@@ -181,6 +182,7 @@ const root = ReactDOM.createRoot(containerNode)
 root.render(
     <React.StrictMode>
         <ErrorBoundary>
+            <LoginPage> </LoginPage>
             <Settings></Settings>
         </ErrorBoundary>
     </React.StrictMode>

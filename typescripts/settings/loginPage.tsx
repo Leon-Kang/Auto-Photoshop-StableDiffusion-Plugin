@@ -14,7 +14,7 @@ export default class LoginPage extends React.Component<{}> {
                         User Name:
                     </sp-label>
                     <sp-textfield
-                        id="username"
+                        id="filedUsername"
                         type="text"
                         placeholder="User Name"
                         value=""
@@ -36,6 +36,7 @@ export default class LoginPage extends React.Component<{}> {
                     <sp-textfield
                         value={''}
                         type="password"
+                        id="fieldPassword"
                         onInput={(
                             event: React.ChangeEvent<HTMLTextAreaElement>
                         ) => {
@@ -50,10 +51,14 @@ export default class LoginPage extends React.Component<{}> {
                 <button
                     className="btnSquare"
                     style={{ marginBottom: 8 }}
+                    id="btnSettingLogin"
                 >
                     Login
                 </button>
 
+                <sp-label
+                    id="labelLogin"
+                />
             </div>
 
 
@@ -61,13 +66,3 @@ export default class LoginPage extends React.Component<{}> {
     }
 };
 
-const containerNode = document.getElementById('reactSettingsContainer')!
-const root = ReactDOM.createRoot(containerNode)
-
-root.render(
-    <React.StrictMode>
-        <ErrorBoundary>
-            <LoginPage> </LoginPage>
-        </ErrorBoundary>
-    </React.StrictMode>
-)
