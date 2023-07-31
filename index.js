@@ -37,7 +37,6 @@ const sd_options = require('./utility/sdapi/options')
 // const sd_config = require('./utility/sdapi/config')
 const session = require('./utility/session')
 const { getSettings } = require('./utility/session')
-const setting_login = require('./utility/lambda/actions')
 
 const ui = require('./utility/ui')
 const preset_util = require('./utility/presets/preset')
