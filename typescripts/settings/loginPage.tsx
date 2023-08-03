@@ -73,11 +73,11 @@ export default class LoginPage extends React.Component<{}, State> {
                     Login
                 </button>
 
-                <a
+                <p
                     id="labelLogin"
                 >
                     {this.state.result}
-                </a>
+                </p>
             </div>
 
 
