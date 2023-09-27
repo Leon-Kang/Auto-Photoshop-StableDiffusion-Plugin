@@ -300,7 +300,6 @@ const root = ReactDOM.createRoot(containerNode)
 root.render(
     <React.StrictMode>
         <ErrorBoundary>
-            <LoginPage> </LoginPage>
             <Settings></Settings>
         </ErrorBoundary>
     </React.StrictMode>

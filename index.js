@@ -1508,7 +1508,7 @@ document
 async function loadPromptShortcut() {
     try {
         let prompt_shortcut = await sdapi.loadPromptShortcut()
-        if (!prompt_shortcut || prompt_shortcut === {}) {
+        if (!prompt_shortcut) {
             prompt_shortcut = promptShortcutExample()
         }
 
