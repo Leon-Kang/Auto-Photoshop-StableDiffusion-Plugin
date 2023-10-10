@@ -4,17 +4,18 @@ const CopyPlugin = require('copy-webpack-plugin')
 
 module.exports = {
     entry: {
-        bundle: './typescripts/entry.ts',
+        bundle: path.resolve(__dirname, '../typescripts/entry.ts'),
     },
     output: {
-        path: path.resolve(__dirname, './typescripts/dist'),
+        path: path.resolve(__dirname, '../typescripts/dist'),
         filename: '[name].js',
         libraryTarget: 'commonjs2',
     },
     mode: 'development',
     // mode: 'production',
-    devtool: 'inline-source-map', // won't work on XD due to lack of eval
-    // devtool: 'source-map',
+
+    devtool: false,
+
     externals: {
         uxp: 'commonjs2 uxp',
         photoshop: 'commonjs2 photoshop',
@@ -35,7 +36,7 @@ module.exports = {
                 loader: 'ts-loader',
                 exclude: /node_modules/,
                 options: {
-                    configFile: 'tsconfig.json',
+                    configFile: path.resolve(__dirname, '../typescripts/tsconfig.json'),
                 },
             },
             {
