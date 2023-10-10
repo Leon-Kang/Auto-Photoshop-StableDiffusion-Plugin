@@ -173,6 +173,7 @@ export class Settings extends React.Component<{}> {
     render() {
         return (
             <div style={{ width: '100%' }}>
+
                 <SpMenu
                     title="select an interploation method for resizing images"
                     items={Object.keys(interpolationMethods)}
